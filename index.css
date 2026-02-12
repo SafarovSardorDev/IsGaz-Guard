@@ -1,7 +1,6 @@
-/* 
-  Tailwind is loaded via CDN in index.html for this environment.
-  Custom styles are defined below.
-*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 body {
   font-family: 'Inter', sans-serif;
