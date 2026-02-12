@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uz" class="scroll-smooth">
+<html lang="uz" class="scroll-smooth dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -38,12 +38,6 @@
     <style>
       body {
         font-family: 'Inter', sans-serif;
-        background-color: #f8fafc;
-        color: #0f172a;
-        transition: background-color 0.3s, color 0.3s;
-      }
-      
-      .dark body {
         background-color: #050505;
         color: #f8fafc;
       }
@@ -57,19 +51,13 @@
           scrollbar-width: none;
       }
       
-      /* Glassmorphism - Adaptive */
+      /* Glassmorphism */
       .glass-card {
-        background: rgba(255, 255, 255, 0.8);
-        backdrop-filter: blur(12px);
-        border: 1px solid rgba(0, 0, 0, 0.05);
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-        transition: all 0.3s ease;
-      }
-
-      .dark .glass-card {
         background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(12px);
         border: 1px solid rgba(255, 255, 255, 0.08);
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+        transition: all 0.3s ease;
       }
       
       .text-glow {
