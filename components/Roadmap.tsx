@@ -31,15 +31,15 @@ const steps: (RoadmapStep & { icon: React.ElementType, desc: string })[] = [
 
 const Roadmap: React.FC = () => {
   return (
-    <section id="roadmap" className="py-24 bg-white dark:bg-[#050505] border-t border-slate-100 dark:border-white/5 transition-colors duration-300">
+    <section id="roadmap" className="py-24 transition-colors duration-300 dark:bg-[#0a0a0a] bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-center text-slate-900 dark:text-white mb-20">
+        <h2 className="text-3xl font-bold text-center dark:text-white text-slate-900 mb-20">
           Rivojlanish xaritasi
         </h2>
 
         <div className="relative">
           {/* Central Line for Desktop */}
-          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-px h-full bg-gradient-to-b from-transparent via-blue-500/30 to-transparent"></div>
+          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-px h-full bg-gradient-to-b from-transparent via-blue-500/50 to-transparent"></div>
 
           <div className="space-y-12">
             {steps.map((step, index) => (
@@ -47,27 +47,27 @@ const Roadmap: React.FC = () => {
                 
                 {/* Content Box */}
                 <div className="w-full md:w-5/12 mb-8 md:mb-0">
-                  <div className={`p-6 glass-card rounded-2xl relative transition-all duration-300 hover:border-blue-500/30 border ${step.status === 'current' ? 'border-blue-500 shadow-md ring-1 ring-blue-500/20' : 'border-slate-200 dark:border-white/10'}`}>
+                  <div className={`p-6 glass-card rounded-2xl relative transition-all duration-300 hover:border-blue-500/30 ${step.status === 'current' ? 'border-blue-500/50 shadow-[0_0_20px_rgba(59,130,246,0.1)]' : 'dark:border-white/5 border-slate-200'}`}>
                     {step.status === 'current' && (
                       <span className="absolute -top-3 right-4 bg-blue-600 text-white text-[10px] px-2 py-0.5 rounded-full font-bold uppercase tracking-wide">
                         Hozirgi bosqich
                       </span>
                     )}
-                    <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 flex items-center">
+                    <h3 className="text-xl font-bold dark:text-white text-slate-900 mb-2 flex items-center">
                       {step.title}
                     </h3>
-                    <p className="text-slate-600 dark:text-slate-300 text-sm">
+                    <p className="dark:text-gray-400 text-slate-600 text-sm">
                       {step.desc}
                     </p>
                   </div>
                 </div>
 
                 {/* Icon/Status Indicator */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center w-12 h-12 rounded-full z-10 bg-white dark:bg-[#050505] border-4 border-slate-50 dark:border-[#111]">
+                <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center w-12 h-12 rounded-full z-10 dark:bg-[#0a0a0a] bg-slate-50 border-4 dark:border-[#0a0a0a] border-slate-50">
                    <div className={`w-10 h-10 rounded-full flex items-center justify-center border-2 transition-all duration-500 ${
-                     step.status === 'completed' ? 'bg-blue-600 border-blue-600 text-white shadow-lg' :
-                     step.status === 'current' ? 'bg-white dark:bg-[#050505] border-blue-500 text-blue-500 animate-pulse' :
-                     'bg-white dark:bg-[#050505] border-slate-200 dark:border-white/20 text-gray-300 dark:text-gray-600'
+                     step.status === 'completed' ? 'bg-blue-600 border-blue-600 text-white shadow-[0_0_15px_rgba(59,130,246,0.5)]' :
+                     step.status === 'current' ? 'dark:bg-[#0a0a0a] bg-white border-blue-500 text-blue-500 animate-pulse' :
+                     'dark:bg-[#0a0a0a] bg-white dark:border-white/10 border-slate-300 text-gray-400'
                    }`}>
                      <step.icon className="w-4 h-4" />
                    </div>

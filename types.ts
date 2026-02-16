@@ -3,7 +3,6 @@ export interface TeamMember {
   role: string;
   tasks: string;
   skills: string;
-  image?: string;
 }
 
 export interface ChatMessage {
